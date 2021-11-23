@@ -37,3 +37,63 @@
     transform: rotate(360deg);
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Outfit:wght@300&display=swap');
+
+* {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+  background-color: rgba(99, 103, 104, 0.803);
+  overflow: hidden;
+}
+
+.keypads {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(40px, auto);
+}
+
+.keypads button {
+  outline: none;
+  border: 1px solid rgb(189, 182, 182);
+  padding: 20px;
+}
+
+.operator {
+  background-color: rgb(244, 156, 4);
+}
+
+.input {
+  height: 45px;
+  margin-bottom: 0;
+  line-height: 50px;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(99, 103, 104, 0.803);
+  border: none;
+  outline: none;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.zero {
+  grid-column: 1 / 3;
+}
