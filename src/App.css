@@ -40,13 +40,12 @@ body {
 }
 
 input[type="text"] {
-  height: 25px;
   width: 292px;
   height: 40px;
   text-align: end;
-  background-color:rgba(99, 103, 104, 0.803);
-  color:white;
-  border:0px;
+  background-color: rgba(99, 103, 104, 0.803);
+  color: white;
+  border: 0;
   outline: none;
   overflow: hidden;
   font-weight: 500;
