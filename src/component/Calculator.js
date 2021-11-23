@@ -6,7 +6,9 @@ class Calculator extends React.Component {
     return (
 
       <div className="container">
-        <div class="input">0</div>
+        <form>
+          <input type="text" value="0"/>
+        </form>
         <div className="keypads">
           <button id="reset" name="AC">AC</button>
           <button id="backspace" name="+/-">+/-</button>
