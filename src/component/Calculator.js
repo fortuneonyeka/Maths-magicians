@@ -10,7 +10,7 @@ class Calculator extends React.Component {
     return (
 
       <div className="container">
-        <div className="input">
+        <div className="display">
         {total}
           {' '}
           {operation}
