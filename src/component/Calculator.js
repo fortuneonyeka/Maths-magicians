@@ -1,14 +1,22 @@
 /* eslint-disable  */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Calculator extends React.Component {
   render() {
+    const {
+      handleClick, total, operation, next,
+    } = this.props;
     return (
 
       <div className="container">
-        <form>
-          <input type="text" value="0"/>
-        </form>
+        <div className="input">
+        {total}
+          {' '}
+          {operation}
+          {' '}
+          {next}
+        </div>
         <div className="keypads">
           <button id="reset" name="AC">AC</button>
           <button id="backspace" name="+/-">+/-</button>
@@ -34,6 +42,13 @@ class Calculator extends React.Component {
 
     );
   }
+}
+
+Calculator.PropTypes = {
+  total: PropTypes.string.isRequired,
+  operation: PropTypes.string.isRequired,
+  next: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired
 }
 
 export default Calculator;
