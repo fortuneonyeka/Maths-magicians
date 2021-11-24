@@ -39,9 +39,9 @@ body {
   background-color: rgb(244, 156, 4);
 }
 
-input[type="text"] {
-  width: 292px;
-  height: 40px;
+.display {
+  width: 297px;
+  height: 70px;
   text-align: end;
   background-color: rgba(99, 103, 104, 0.803);
   color: white;
