@@ -11,7 +11,7 @@ class Calculator extends React.Component {
 
       <div className="container">
         <div className="display">
-        { next || total ||operation|| '0' }
+        { next || operation ||total|| '0' }
         </div>
         <div className="keypads">
           <button id="reset" name="AC" onClick={handleClick}>AC</button>
