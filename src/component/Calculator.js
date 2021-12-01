@@ -1,20 +1,25 @@
-/* eslint-disable  */
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-class Calculator extends React.Component {
-   render() {
-     const { handleClick, total, operation, next } = this.props;
+const Calculator = (props) => {
+  const {
+    handleClick, total, operation, next,
+  } = props;
   return (
     <div>
       <h2 className="do-math">Let`s do some maths!</h2>
       <div className="container">
-        <div className="display">{next || operation || total || "0"}</div>
+        <div className="display">{next || operation || total || '0'}</div>
         <div className="keypads">
           <button type="button" id="reset" name="AC" onClick={handleClick}>
             AC
           </button>
-          <button type="button" id="backspace" name="+/-" onClick={handleClick}>
+          <button
+            type="button"
+            id="backspace"
+            name="+/-"
+            onClick={handleClick}
+          >
             +/-
           </button>
           <button type="button" name="%" onClick={handleClick}>
@@ -80,22 +85,29 @@ class Calculator extends React.Component {
           >
             +
           </button>
-          <button type="button" name="0" className="zero" onClick={handleClick}>
+          <button
+            type="button"
+            name="0"
+            className="zero"
+            onClick={handleClick}
+          >
             0
           </button>
           <button type="button" name="." onClick={handleClick}>
             .
           </button>
-          <button type="button" className="operator grid" onClick={handleClick}>
+          <button
+            type="button"
+            className="operator grid"
+            onClick={handleClick}
+          >
             =
           </button>
         </div>
       </div>
     </div>
   );
-   }
 };
-
 
 Calculator.propTypes = {
   total: PropTypes.string.isRequired,
@@ -103,6 +115,5 @@ Calculator.propTypes = {
   next: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
 };
-
 
 export default Calculator;
