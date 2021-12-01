@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Estonia&family=Outfit:wght@300&display=swap');
 
 * {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Caveat', cursive;
   font-size: 18px;
 }
-
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .container {
   top: 50%;
@@ -65,9 +59,15 @@
 }
 
 .nav-title {
-  font-family: 'Caveat', cursive;
   font-size: 2em;
   text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-title:hover {
+  color: goldenrod;
+  text-decoration: underline;
 }
 
 .nav-menu-list {
@@ -82,12 +82,12 @@
 .nav-menu-list a {
   text-decoration: none;
   color: black;
-  font-family: 'Caveat', cursive;
   font-size: 2em;
 }
 
 .nav-menu-list a:hover {
   text-decoration: underline;
+  color: goldenrod;
 }
 
 .active-link {
@@ -97,7 +97,6 @@
 .do-math {
   margin-top: 7%;
   margin-left: 5%;
-  font-family: 'Caveat', cursive;
   font-size: 2em;
   text-align: center;
   display: inline-block;

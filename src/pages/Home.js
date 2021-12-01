@@ -1,7 +1,6 @@
-/* eslint-disable  */
-import React from "react";
+import React from 'react';
 
-function Home () {
+function Home() {
   return (
     <div>
       <section className="home">
@@ -29,6 +28,5 @@ function Home () {
       </section>
     </div>
   );
- 
-};
+}
 export default Home;

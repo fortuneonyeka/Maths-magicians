@@ -1,38 +1,39 @@
-/* eslint-disable  */
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 function NavBar() {
   const links = [
     {
       id: 1,
-      path: "/",
-      text: "Home",
+      path: '/',
+      text: 'Home',
     },
     {
       id: 2,
-      path: "/calculator/",
-      text: "Calculator",
+      path: '/calculator/',
+      text: 'Calculator',
     },
     {
       id: 3,
-      path: "/quote/",
-      text: "Quote",
+      path: '/quote/',
+      text: 'Quote',
     },
   ];
 
   return (
-      <nav className="nav-menu">
-      <h1 className="nav-title">Math Magicians</h1>
-        <ul className="nav-menu-list">
-          {links.map((link) => (
-            <li key={link.id}>
-              <NavLink to={link.path} activeClassName="active-link" exact>
-                {link.text}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <nav className="nav-menu">
+      <a className="nav-title" href="/">
+        Math Magicians
+      </a>
+      <ul className="nav-menu-list">
+        {links.map((link) => (
+          <li key={link.id}>
+            <NavLink to={link.path} activeClassName="active-link" exact>
+              {link.text}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
 

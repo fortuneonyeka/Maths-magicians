@@ -1,4 +1,3 @@
-/* eslint-disable  */
 import React from 'react';
 
 function Quote() {
@@ -20,5 +19,5 @@ function Quote() {
       </section>
     </div>
   );
-};
+}
 export default Quote;
