@@ -4,13 +4,6 @@ import React from "react";
 function Home () {
   return (
     <div>
-      <div
-        style={{
-          padding: "5em",
-          justifySelf: "center",
-          alignSelf: "center",
-        }}
-      ></div>
       <section className="home">
         <div className="content">
           <h4 className="welcome-heading">Welcome to our Page</h4>
