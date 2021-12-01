@@ -33,23 +33,29 @@
   background-color: rgb(244, 156, 4);
 }
 
+.operator:hover {
+  background-color: rgb(182, 127, 26);
+}
+
 .display {
-  width: 99%;
-  height: 40px;
+  font-family: 'baseCalc', monospace;
+  color: #adff2f;
+  text-shadow: 0 0 5px greenyellow;
+  width: 90%;
   text-align: end;
-  background-color: rgba(99, 103, 104, 0.803);
-  color: white;
-  border: 0;
-  outline: none;
-  overflow: hidden;
-  font-weight: 500;
-  font-size: 20px;
-  padding-top: 20px;
-  padding-right: 20px;
+  font-size: 48px;
+  padding: 16px 24px;
+  font-weight: 400;
+  background-color: #282c34;
 }
 
 .zero {
   grid-column: 1 / 3;
+}
+
+.zero:hover {
+  background-color: goldenrod;
+  color: red;
 }
 
 .nav-menu {
@@ -113,4 +119,9 @@
   margin-top: 10%;
   width: 700px;
   word-wrap: break-word;
+}
+
+.btn:hover {
+  background-color: goldenrod;
+  color: red;
 }
