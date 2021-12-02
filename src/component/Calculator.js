@@ -24,12 +24,7 @@ const Calculator = () => {
           <button type="button" id="reset" name="AC" onClick={handleClick}>
             AC
           </button>
-          <button
-            type="button"
-            id="backspace"
-            name="+/-"
-            onClick={handleClick}
-          >
+          <button type="button" id="backspace" name="+/-" onClick={handleClick}>
             +/-
           </button>
           <button type="button" name="%" onClick={handleClick}>
@@ -95,22 +90,13 @@ const Calculator = () => {
           >
             +
           </button>
-          <button
-            type="button"
-            name="0"
-            className="zero"
-            onClick={handleClick}
-          >
+          <button type="button" name="0" className="zero" onClick={handleClick}>
             0
           </button>
           <button type="button" name="." onClick={handleClick}>
             .
           </button>
-          <button
-            type="button"
-            className="operator grid"
-            onClick={handleClick}
-          >
+          <button type="button" className="operator grid" onClick={handleClick}>
             =
           </button>
         </div>
