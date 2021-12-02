@@ -1,10 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { useState } from 'react';
+// import PropTypes from 'prop-types';
+import calculate from '../logic/calculate';
 
-const Calculator = (props) => {
-  const {
-    handleClick, total, operation, next,
-  } = props;
+// const Calculator = (props) => {
+//   const {
+//     handleClick, total, operation, next,
+//   } = props;
+const Calculator = () => {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+  const { total, next, operation } = state;
+
+  const handleClick = (e) => {
+    const { total, next } = state;
+    if (!total && !next && e.target.classList.contains('operator')) return null;
+    setState((state) => calculate(state, e.target.innerHTML));
+    return null;
+  };
   return (
     <div>
       <h2 className="do-math">Let`s do some maths!</h2>
@@ -14,12 +29,7 @@ const Calculator = (props) => {
           <button type="button" id="reset" name="AC" onClick={handleClick}>
             AC
           </button>
-          <button
-            type="button"
-            id="backspace"
-            name="+/-"
-            onClick={handleClick}
-          >
+          <button type="button" id="backspace" name="+/-" onClick={handleClick}>
             +/-
           </button>
           <button type="button" name="%" onClick={handleClick}>
@@ -85,22 +95,13 @@ const Calculator = (props) => {
           >
             +
           </button>
-          <button
-            type="button"
-            name="0"
-            className="zero"
-            onClick={handleClick}
-          >
+          <button type="button" name="0" className="zero" onClick={handleClick}>
             0
           </button>
           <button type="button" name="." onClick={handleClick}>
             .
           </button>
-          <button
-            type="button"
-            className="operator grid"
-            onClick={handleClick}
-          >
+          <button type="button" className="operator grid" onClick={handleClick}>
             =
           </button>
         </div>
@@ -109,11 +110,11 @@ const Calculator = (props) => {
   );
 };
 
-Calculator.propTypes = {
-  total: PropTypes.string.isRequired,
-  operation: PropTypes.string.isRequired,
-  next: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
-};
+// Calculator.propTypes = {
+//   total: PropTypes.string.isRequired,
+//   operation: PropTypes.string.isRequired,
+//   next: PropTypes.string.isRequired,
+//   handleClick: PropTypes.func.isRequired,
+// };
 
 export default Calculator;
