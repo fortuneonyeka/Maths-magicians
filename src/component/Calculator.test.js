@@ -104,4 +104,15 @@ describe('Calculator interaction tests', () => {
 
     expect(result).toStrictEqual({ next: buttonName, total: null });
   });
+
+  it('calculate({next.includes(".")}, buttonName=".") should return same object', () => {
+    const buttonName = ".";
+    const obj = { total: null, next: "5.3", operation: null };
+
+    const result = calculate(obj, buttonName);
+
+    expect(result).toStrictEqual(obj);
+  });
+
+  
 });
