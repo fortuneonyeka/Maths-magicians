@@ -131,4 +131,13 @@ describe('Calculator interaction tests', () => {
 
     expect(result).toStrictEqual({ total: `${obj.total}.` });
   });
+
+  it('calculate({!total}, buttonName=".") should return { total: "total." }', () => {
+    const buttonName = ".";
+    const obj = { total: null, next: null, operation: null };
+
+    const result = calculate(obj, buttonName);
+
+    expect(result).toStrictEqual({ total: 0 + buttonName });
+  });
 });
