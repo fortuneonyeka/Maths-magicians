@@ -114,5 +114,12 @@ describe('Calculator interaction tests', () => {
     expect(result).toStrictEqual(obj);
   });
 
-  
+  it('calculate({!next.includes(".")}, buttonName=".") should override next, obj.next+"."', () => {
+    const buttonName = ".";
+    const obj = { total: null, next: "53", operation: null };
+
+    const result = calculate(obj, buttonName);
+
+    expect(result).toStrictEqual({ ...obj, next: obj.next + buttonName });
+  });
 });
