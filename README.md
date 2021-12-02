@@ -1,11 +1,13 @@
 # Maths-magicians
 "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:  Make simple calculations. Read a random math-related quote.
 
-![Screenshot](./images/Calculator-component.png)
+![Screenshot](./images/Math-Magician-home.png)
+![Screenshot](./images/Math-Magician-quotes.png)
+![Screenshot](./images/Math-Magician-calc.png)
 
 ## Built With
 
-- HTML, CSS, JavaScript, & React;
+- HTML, CSS, JavaScript, React, react-router-dom;
 - Visual Studio, Git, & GitHub;
 
 ## Getting Started
@@ -15,12 +17,12 @@ To run this project, you only need a computer with a browser (like Google Chrome
 1. In your terminal, in the folder of your preference, type the following bash command to clone this repository:
 
 ```sh
-git@github.com:fortuneonyeka/Maths-magicians.gitLeaderBoard-project.git
+git@github.com:fortuneonyeka/Maths-magicians.git
 ```
 
 2. Now that you have already cloned the repo run the following commands to get the project up and running:
 ```sh
-cd LeaderBoard-project
+cd Maths-magicians
 npm install
 npm start
 ```
