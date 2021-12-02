@@ -122,4 +122,13 @@ describe('Calculator interaction tests', () => {
 
     expect(result).toStrictEqual({ ...obj, next: obj.next + buttonName });
   });
+
+  it('calculate({!total.includes(".")}, buttonName=".") should return { total: "total." }', () => {
+    const buttonName = ".";
+    const obj = { total: "43", next: null, operation: null };
+
+    const result = calculate(obj, buttonName);
+
+    expect(result).toStrictEqual({ total: `${obj.total}.` });
+  });
 });
