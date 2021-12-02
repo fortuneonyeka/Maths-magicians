@@ -5,7 +5,8 @@ import calculate, { isNumber } from '../logic/calculate';
 describe('Calculator Component', () => {
   it('Calculator snapshot test', () => {
     const { asFragment: calculator } = render(<Calculator />);
-    expect(calculator()).toMatchSnapshot;
+
+    expect(calculator()).toMatchSnapshot();
   });
 });
 
@@ -106,8 +107,8 @@ describe('Calculator interaction tests', () => {
   });
 
   it('calculate({next.includes(".")}, buttonName=".") should return same object', () => {
-    const buttonName = ".";
-    const obj = { total: null, next: "5.3", operation: null };
+    const buttonName = '.';
+    const obj = { total: null, next: '5.3', operation: null };
 
     const result = calculate(obj, buttonName);
 
@@ -115,8 +116,8 @@ describe('Calculator interaction tests', () => {
   });
 
   it('calculate({!next.includes(".")}, buttonName=".") should override next, obj.next+"."', () => {
-    const buttonName = ".";
-    const obj = { total: null, next: "53", operation: null };
+    const buttonName = '.';
+    const obj = { total: null, next: '53', operation: null };
 
     const result = calculate(obj, buttonName);
 
@@ -124,8 +125,8 @@ describe('Calculator interaction tests', () => {
   });
 
   it('calculate({!total.includes(".")}, buttonName=".") should return { total: "total." }', () => {
-    const buttonName = ".";
-    const obj = { total: "43", next: null, operation: null };
+    const buttonName = '.';
+    const obj = { total: '43', next: null, operation: null };
 
     const result = calculate(obj, buttonName);
 
@@ -133,7 +134,7 @@ describe('Calculator interaction tests', () => {
   });
 
   it('calculate({!total}, buttonName=".") should return { total: "total." }', () => {
-    const buttonName = ".";
+    const buttonName = '.';
     const obj = { total: null, next: null, operation: null };
 
     const result = calculate(obj, buttonName);

@@ -1,11 +1,6 @@
 import { useState } from 'react';
-// import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
 
-// const Calculator = (props) => {
-//   const {
-//     handleClick, total, operation, next,
-//   } = props;
 const Calculator = () => {
   const [state, setState] = useState({
     total: null,
@@ -109,12 +104,5 @@ const Calculator = () => {
     </div>
   );
 };
-
-// Calculator.propTypes = {
-//   total: PropTypes.string.isRequired,
-//   operation: PropTypes.string.isRequired,
-//   next: PropTypes.string.isRequired,
-//   handleClick: PropTypes.func.isRequired,
-// };
 
 export default Calculator;
