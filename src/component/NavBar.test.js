@@ -1,29 +1,29 @@
-import { BrowserRouter as Router } from "react-router-dom";
-import { render, fireEvent, screen } from "@testing-library/react";
-import NavBar from "./Navbar";
+import { BrowserRouter as Router } from 'react-router-dom';
+import { render, fireEvent, screen } from '@testing-library/react';
+import NavBar from './Navbar';
 
-describe("NavBar component", () => {
-  it("NavBar snapshot test", () => {
+describe('NavBar component', () => {
+  it('NavBar snapshot test', () => {
     const { asFragment: navBar } = render(
       <Router>
         <NavBar />
-      </Router>
+      </Router>,
     );
 
     expect(navBar()).toMatchSnapshot();
   });
 });
 
-describe("NavBar interaction tests", () => {
+describe('NavBar interaction tests', () => {
   it("adds 'active' class to the selected NavLink", () => {
     render(
       <Router>
         <NavBar />
-      </Router>
+      </Router>,
     );
-    const calculatorLink = screen.getByText("Calculator");
-    expect(calculatorLink.className).toEqual("");
+    const calculatorLink = screen.getByText('Calculator');
+    expect(calculatorLink.className).toEqual('');
     fireEvent.click(calculatorLink);
-    expect(calculatorLink.className).toEqual("active");
+    expect(calculatorLink.className).toEqual('active');
   });
 });
