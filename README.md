@@ -5,6 +5,10 @@
 ![Screenshot](./images/Math-Magician-quotes.png)
 ![Screenshot](./images/Math-Magician-calc.png)
 
+
+## Live link
+[Heroku]https://polar-earth-51167.herokuapp.com/
+[Netlify]https://61ae31cfd6fb4c7d7c03c5aa--focused-yonath-4fce09.netlify.app/
 ## Built With
 
 - HTML, CSS, JavaScript, React, react-router-dom;
